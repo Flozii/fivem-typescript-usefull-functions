@@ -17,6 +17,6 @@ function TriggerServerCallback(name : string, requestId: any, source: number, cb
   }
 }
 
-RegisterServerCallback('test:callback', (source, callback) => {
+/*RegisterServerCallback('test:callback', (source, callback) => {
   callback("test");
-});
+});*/

@@ -19,8 +19,8 @@ onNet('server_callback', (requestId: any, a?: any) => {
 });
 
 
-RegisterCommand('callbacktest', () => {
+/*RegisterCommand('callbacktest', () => {
     TriggerServerCallback("test:callback", (result: string) => {
         console.log(result);
     });
-}, false);
+}, false);*/
