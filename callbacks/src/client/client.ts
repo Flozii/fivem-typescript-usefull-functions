@@ -1,7 +1,7 @@
 const ServerCallbacks = {}
 let CurrentRequestId = 0
 
-function TriggerServerCallback(name: string, cb: any, a?: any) {
+export const TriggerServerCallback = (name: string, cb: any, a?: any) => {
     ServerCallbacks[CurrentRequestId] = cb
     emitNet('trigger_server_callback', name, CurrentRequestId, a)
     if (CurrentRequestId < 65535) {
@@ -17,6 +17,7 @@ onNet('server_callback', (requestId: any, a?: any) => {
     }
     ServerCallbacks[requestId] = null
 });
+
 
 
 /*RegisterCommand('callbacktest', () => {

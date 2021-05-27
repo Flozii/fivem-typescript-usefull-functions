@@ -7,7 +7,7 @@ onNet('trigger_server_callback', (name: string, requestId: number, a?: any) => {
   }, a)
 });
 
-function RegisterServerCallback(name: string, cb: any) {
+export const RegisterServerCallback = (name: string, cb: any) => {
   ServerCallbacks[name] = cb
 }
 
