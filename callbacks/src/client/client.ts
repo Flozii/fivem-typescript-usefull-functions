@@ -1,4 +1,4 @@
-const ServerCallbacks = {}
+let ServerCallbacks: any[] = []
 let CurrentRequestId = 0
 
 export const TriggerServerCallback = (name: string, cb: any, a?: any) => {
